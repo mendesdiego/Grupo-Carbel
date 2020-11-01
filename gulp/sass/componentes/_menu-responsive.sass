@@ -1,0 +1,166 @@
+// menu responsivo
+.logo-header
+
+    img
+        max-width: 100%
+        height: auto
+
+.menu-ativo
+    overflow: hidden
+
+    .menu-site
+        border-bottom: 2px solid $c02
+
+.menu-site
+    position: relative
+    width: 100%
+    border-bottom: 2px solid transparent
+    z-index: 2
+    
+//// menu responsivo 
+.btn-menu-responsive
+    position: absolute
+    top: 50%
+    right: 20px
+    width: 40px
+    height: 40px
+    z-index: 1
+    background-color: transparent
+    border: transparent
+    cursor: pointer
+    transform: translateY(-50%)
+    z-index: 200
+
+    .icon-bar
+        height: 4px
+        width: 27px
+        background-color: $c02
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        transition: background .1s linear .3s
+
+        &::after, &::before
+            content: ''
+            position: absolute
+            left: 0
+            height: 4px
+            width: 100%
+            background-color: $c02
+
+        &::after
+            bottom: -10px
+            transition: bottom .3s ease-in-out .4s, transform .3s ease-in-out
+
+        &::before
+            top: -10px
+            transition: top .3s ease-in-out .4s, transform .3s ease-in-out
+
+.openMenu
+
+    .icon-bar
+        background-color: transparent
+
+        &::before
+            top: 0
+            transform: rotate(-45deg)
+            transition: top .3s ease-in-out, transform .3s ease-in-out .4s
+            background-color: $c02
+            
+        &::after
+            bottom: 0
+            transform: rotate(45deg)
+            transition: bottom .3s ease-in-out, transform .3s ease-in-out .4s
+            background-color: $c02
+
+.lista-menu
+    list-style: none
+    padding: 0px
+    width: 100%
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+    .card-menu
+        position: relative
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        padding: 15px 0
+        background-color: #F9F9F9
+
+        &:not(:last-child)
+            margin-bottom: 15px
+
+        &.item-collapse
+            margin-bottom: 0
+            
+
+        a
+            color: $c01
+            font-size: 15px
+            font-weight: 400
+
+            &:hover
+                text-decoration: none
+
+            &.solo
+                margin-bottom: 0
+
+.content-accordion
+    position: relative
+    width: 100%
+    background-color: #F9F9F9
+    padding: 20px 24px
+
+.box-item-menu
+    position: relative
+    width: 100%
+    display: block
+    padding: 15px
+    background-color: $c00
+
+    &:not(:last-child)
+        margin-bottom: 10px
+        
+
+    h3, p
+        color: $c01
+
+    h3
+        font-size: 15px
+        font-weight: 700
+        line-height: 24px
+        margin-bottom: 0
+
+        &.titulo-menu-sobre
+            text-align: center
+
+    p
+        font-size: 11px
+        font-weight: 400px
+        line-height: 14px
+
+.body-menu-responsive
+    position: fixed
+    width: 100%
+    height: 100%
+    background-color: $c00
+    opacity: 1
+    top: 0px
+    z-index: 1
+    right: -100%
+    transition: right .5s
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    padding: 0 30px
+
+.body-menu-responsive-open
+    right: 0

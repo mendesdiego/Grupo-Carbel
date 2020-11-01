@@ -1,0 +1,204 @@
+.banner
+  position: relative
+  width: 100%
+  display: block
+
+  &__mobile
+    
+    @media screen and ( $break-lg )
+      display: none
+
+  &-desk
+    background-image: url(../images/banner-desk.png)
+    background-position: center top
+    background-repeat: no-repeat
+    background-size: cover
+    padding-bottom: 29%
+
+.img-banner
+  position: relative
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+.content-banner-mobile
+  position: relative
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+.logo-civic
+  position: relative
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-bottom: 40px
+
+.contato-banner
+  position: relative
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+  @media screen and ( $break-lg )
+    margin-top: 20px
+
+  @media screen and ( $break-1366 )
+    position: absolute
+    top: 3%
+    right: 0
+    justify-content: flex-end
+
+  @media screen and ( $break-1880 )
+    top: 31%
+    width: 77%
+    padding-bottom: 29%
+    
+
+.form-banner
+  position: relative
+  width: 100%
+  display: block
+  background-color: $c01
+  border-radius: 4px
+  padding: 19px
+
+  @media screen and ( $break-lg )
+    width: 50%
+
+  @media screen and ( $break-1366 )
+    width: 25%
+    right: 3%
+
+  .form
+    position: relative
+    width: 100%
+    display: block
+    margin-top: 19px
+
+    input
+      padding: 1.15rem 0.75rem 1.15rem 30px
+
+    input, select
+      background-color: transparent
+      font-family: 'Roboto', sans-serif
+      font-size: 14px
+      line-height: 24px
+      color: #bcbcbc
+
+      // Chrome/Opera/Safari
+      &::-webkit-input-placeholder
+        font-family: 'Roboto', sans-serif
+        font-size: 14px
+        line-height: 24px
+        color: #bcbcbc
+
+      /* Firefox 19+ */
+      &::-moz-placeholder
+        font-family: 'Roboto', sans-serif
+        font-size: 14px
+        line-height: 24px
+        color: #bcbcbc
+      
+      /* IE 10+ */
+      &:-ms-input-placeholder
+        font-family: 'Roboto', sans-serif
+        font-size: 14px
+        line-height: 24px 
+        color: #bcbcbc
+
+      /* Firefox 18- */
+      &:-moz-placeholder
+        font-family: 'Roboto', sans-serif
+        font-size: 14px
+        line-height: 24px
+        color: #bcbcbc
+
+    .form-group
+
+      &.nome, &.email, &.telefone
+        position: relative
+
+        &::before
+          content: ''
+          position: absolute
+          top: 10px
+          left: 10px
+          width: 16px
+          height: 16px
+          background-image: url(../images/icon-user.png)
+          background-position: center top
+          background-repeat: no-repeat
+          background-size: 16px 16px
+          z-index: 0
+
+      &.email
+
+        &::before
+          content: ''
+          position: absolute
+          top: 10px
+          left: 10px
+          width: 16px
+          height: 13px
+          background-image: url(../images/envelope-form.png)
+          background-position: center top
+          background-repeat: no-repeat
+          background-size: 16px 13px
+          z-index: 0
+
+      &.telefone
+
+        &::before
+          content: ''
+          position: absolute
+          top: 10px
+          left: 10px
+          width: 18px
+          height: 18px
+          background-image: url(../images/icon-phone.png)
+          background-position: center top
+          background-repeat: no-repeat
+          background-size: 18px 18px
+          z-index: 0
+
+      select
+        padding: 0.375rem 1.75rem
+        height: 38px
+
+.select-horario
+  position: relative
+
+  &::before
+    content: ''
+    position: absolute
+    top: 10px
+    left: 10px
+    width: 18px
+    height: 17px
+    background-image: url(../images/icon-clock.png)
+    background-position: center top
+    background-repeat: no-repeat
+    background-size: 18px 17px
+    z-index: 0
+
+.select-unidade
+  position: relative
+
+  &::before
+    content: ''
+    position: absolute
+    top: 10px
+    left: 10px
+    width: 12px
+    height: 18px
+    background-image: url(../images/pin-form.png)
+    background-position: center top
+    background-repeat: no-repeat
+    background-size: 12px 18px
+    z-index: 0
